@@ -1,6 +1,11 @@
+let addPostBtn = document.querySelector('.create-post-btn');
+
+
 document.addEventListener('DOMContentLoaded', async function(){
     let posts = await getPosts();
-    posts.forEach(() => {
+    let articles = document.querySelector('.articles');
+    articles.innerHTML = '';
+    posts.forEach((post) => {
         let postHTML = `
         <article class="d-flex justify-content-between align-items-center article-inline">
             <div class="id w5">${post.id}</div>
@@ -10,5 +15,16 @@ document.addEventListener('DOMContentLoaded', async function(){
             <div class="edit w10"><button class="btn btn-link">Edit</button></div>
             <div class="remove w5"><button class="btn btn-link">X</button></div>
         </article>`;
+        articles.insertAdjacentHTML('beforeend', postHTML);
     })
+})
+
+addPostBtn.addEventListener('click', function() {
+    let articlesTab = document.getElementById('v-pills-articles');
+    articlesTab.classList.remove('show');
+    articlesTab.classList.remove('active');
+
+    let createTab = document.getElementById('v-pills-create-post');
+    createTab.classList.add('show');
+    createTab.classList.add('active');
 })
