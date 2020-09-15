@@ -1,4 +1,4 @@
-const { response } = require("express");
+const {response} = require('express');
 
 async function getPosts() {
     return await fetch('http://localhost:3000/posts')

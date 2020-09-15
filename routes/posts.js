@@ -9,6 +9,12 @@ router.get('/', async (req, resp) => {
     resp.send(posts);
 })
 
+router.get('/:id', async (req, resp) => {
+    let id = req.params.id;
+    let post = await Post.findOne({id: id});
+    resp.send(post);
+})
+
 router.post('/', async (req, resp) => {
     let reqBody = req.body;
     let imgPath;
