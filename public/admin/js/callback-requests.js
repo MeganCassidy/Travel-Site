@@ -4,6 +4,7 @@ async function getCallbackRequests() {
                     .then((data) => data);
 }
 
+
 let requestsBlock = document.querySelector('#v-pills-callback');
 
 requestsBlock.addEventListener('click', function(e) {
