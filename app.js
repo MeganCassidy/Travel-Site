@@ -5,6 +5,7 @@ let multer = require('multer');
 let path = require('path');
 let postsRouter = require('./routes/posts');
 let callbackRequestRouter = require('./routes/callback-requests');
+let emailsRouter = require('./routes/emails');
 
 
 mongoose.connect('mongodb://localhost/travels', { useNewUrlParser: true });
@@ -20,5 +21,6 @@ app.use(express.static('public'));
 
 app.use('/posts', postsRouter);
 app.use('/callback-requests', callbackRequestRouter);
+app.use('/emails', emailsRouter);
 
 app.listen(3000, () => console.log('Listening 3000...'));

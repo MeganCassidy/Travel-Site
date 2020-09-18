@@ -102,20 +102,20 @@
         			</button>
       			</div>
       			<div class="modal-body">
-        			<form>
+        			<form class="email-request-form">
         				<div class="form-group">
     						<label for="name">Your name</label>
     						<input type="text" class="form-control" id="name" placeholder="Name">
   						</div>
   						<div class="form-group">
-    						<label for="Phone">Phone number</label>
-    						<input type="text" class="form-control" id="Phone" placeholder="Phone">
+    						<label for="email">Email</label>
+    						<input type="text" class="form-control" id="email" placeholder="Email">
   						</div>
   						<div class="form-group">
     						<label for="Message">Message</label>
-    						<textarea class="form-control" id="Message" rows="3"></textarea>
+    						<textarea class="form-control" id="message" rows="3"></textarea>
   						</div>
-  						<input type="submit" class="btn btn-primary">
+  						<input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
         			</form>
       			</div>
     		</div>
@@ -143,6 +143,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/posts.js"></script>
+	<script src="js/emails.js"></script>
 	<script src="js/main.js"></script>
 <!-- ================ END OF BOOTSTRAP LINKS ============ -->	
 </body>
