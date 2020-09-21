@@ -2,6 +2,7 @@ let Post = require('../models/posts').Post;
 let uniqid = require('uniqid');
 let express = require('express');
 let router = express.Router();
+let path = require('path');
 
 
 router.get('/', async (req, resp) => {

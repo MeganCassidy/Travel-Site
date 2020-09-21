@@ -63,3 +63,26 @@ footer>.container, footer .row {
 .article-inline:nth-of-type(odd){
 	background: rgba(0, 0, 0, 0.05);
 }
+
+.sight-container{
+	margin-top: 50px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #ccc;
+	padding: 15px 50px;
+}
+
+.sight-container h1{
+	text-align: center;
+}
+
+.sight-container img{
+	width: 100%;
+}
+
+.sight-container .date{
+	font-weight: bold;
+}
+
+.map{
+	height: 400px;
+}

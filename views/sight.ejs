@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Let's Travel</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
+	<title><%= title %></title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+
+	<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css"/>
 </head>
 <body>
 
@@ -12,7 +19,7 @@
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		 	<div class="container">
-		 		<a class="navbar-brand" href="#">Let's Travel!</a>
+		 		<a class="navbar-brand" href="/">Let's Travel!</a>
   					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     				<span class="navbar-toggler-icon"></span>
   					</button>
@@ -20,7 +27,7 @@
   				<div class="collapse navbar-collapse" id="navbarSupportedContent">
     				<ul class="navbar-nav mr-auto">
       				<li class="nav-item active">
-        			<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        			<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       				</li>
       				<li class="nav-item">
         			<a class="nav-link" href="#">About Us</a>
@@ -43,23 +50,19 @@
 
     <main>
         <div class="container sight-container">
-            <h1>Big Ben</h1>
+            <h1><%= title %></h1>
             <hr>
-            <img src="https://cdn.pixabay.com/photo/2015/09/18/11/47/london-bridge-945499__480.jpg" alt="Big Ben">
+            <img src="<%= imageURL %>" alt="Landmark Image">
             <hr>
-            <p class="date">2021-01-11</p>
+            <p class="date"><%= date %></p>
             <hr>
-            <p class="text">Big Ben is the nickname for the Great Bell of the striking clock at the north end of the Palace of Westminster in London[1]; 
-                the name is frequently extended to refer to both the clock and the clock tower.[2][3] The official name of the tower in which Big Ben is located was originally the Clock Tower; 
-                it was renamed Elizabeth Tower in 2012 to mark the Diamond Jubilee of Elizabeth II, Queen of the United Kingdom.
-                The tower was designed by Augustus Pugin in a neo-Gothic style. When completed in 1859, its clock was the largest and most accurate four-faced striking and chiming clock in the world.
-                The tower stands 315 feet (96 m) tall, and the climb from ground level to the belfry is 334 steps. Its base is square, measuring 39 feet (12 m) on each side. Dials of the clock are 23 feet (7.0 m) in diameter. 
-                On 31 May 2009, celebrations were held to mark the tower's 150th anniversary</p>
+            <p class="text"><%= text %></p>
             <div class="map"></div>   
         </div>
 
     </main>
-    
+
+	<script src="/admin/js/maps.js"></script>
     </body>
 </html>
 
