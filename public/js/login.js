@@ -12,7 +12,14 @@ signInForm.addEventListener('submit', function(e) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({email, password})
-    }).then((resp) => resp.text()).then((data) => alert(data));
+    }).then((resp) => {
+        if(resp.status === 400) {
+            throw new Error();
+        }
+        return resp.json();
+    }).then((data) => {
+        window.location.href = data.redirectURL;
+    }).catch(() => alert('Incorrect email or password'));
 })
 
 registerForm.addEventListener('submit', function(e) {

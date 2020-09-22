@@ -3,6 +3,7 @@ let uniqid = require('uniqid');
 let express = require('express');
 let router = express.Router();
 let path = require('path');
+let authMiddleware = require('../middleware/auth');
 
 
 router.get('/', async (req, resp) => {
@@ -16,7 +17,7 @@ router.get('/:id', async (req, resp) => {
     resp.send(post);
 })
 
-router.post('/', async (req, resp) => {
+router.post('/', authMiddleware, async (req, resp) => {
     let reqBody = req.body;
     let imgPath;
     if(reqBody.imageURL) {
@@ -39,13 +40,13 @@ router.post('/', async (req, resp) => {
     resp.send('Created');
 })
 
-router.delete('/:id', async (req, resp) => {
+router.delete('/:id', authMiddleware, async (req, resp) => {
     let id = req.params.id;
     await Post.deleteOne({id: id});
     resp.send('Deleted!');
 })
 
-router.put('/:id', async (req, resp) => {
+router.put('/:id', authMiddleware, async (req, resp) => {
     let id = req.params.id;
     await Post.updateOne({id: id}, req.body);
     resp.send('Updated!');

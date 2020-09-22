@@ -1,4 +1,5 @@
 let addPostBtn = document.querySelector('.create-post-btn');
+let logOutBtn = document.querySelector('.log-out-btn');
 
 
 document.addEventListener('DOMContentLoaded', async function() {
@@ -73,3 +74,9 @@ async function addEmails(){
         requestsBlock.insertAdjacentHTML('beforeend', requestHTML);
     })
 }
+
+
+logOutBtn.addEventListener('click', function() {
+    document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+    window.location.href = '/';
+})
