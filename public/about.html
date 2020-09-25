@@ -25,9 +25,7 @@
       				<li class="nav-item active">
         			<a class="nav-link" href="#">About Us</a>
       				</li>
-      				<li class="nav-item">
-       				<a class="nav-link" href="#">Contacts</a>
-					</li>
+      				<button class="btn" data-toggle="modal" data-target="#mymodal">Contact Us</button>
 					<li class="nav-item">
 					<a class="nav-link" href="/admin">Admin</a>
 					</li>
@@ -40,14 +38,14 @@
     <!--Main section-->
     <main>
         <div class="container page-wrapper">
-            <h1>About Us</h1>
+            <h2 class="main-title about-us-title">About Us</h2>
             <hr>
             <div class="row">
-                <div class="col-3">
+                <div class="col-3"> 
                     <div class="card">
                         <div class="card-block">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><strong>Popular Destinations</strong></li>
+                                <li class="list-group-item list-title"><strong>Popular Destinations</strong></li>
                                 <li class="list-group-item">The Bahamas</li>
                                 <li class="list-group-item">Mexico</li>
                                 <li class="list-group-item">Paris</li>
@@ -60,52 +58,93 @@
                 <div class="col-9">
                     <div class="card">
                         <div class="card-block">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus facere recusandae ipsa, illo et consequatur in. 
-                                Perspiciatis dolor dicta a tempore? Molestias quae ipsa laboriosam earum vel fugiat, nobis numquam. 
-                                Natus dolore exercitationem perspiciatis ab nemo. Recusandae vero ipsa ipsum mollitia modi aperiam at incidunt doloremque exercitationem
-                                ullam aspernatur culpa repellendus nemo laboriosam eius, exercitationem porro, fugit iusto eveniet! Assumenda provident minima 
-                                corporis similique eveniet quo sunt esse facilis explicabo id fugit ad maxime dolorum debitis, quod commodi quos expedita labore 
-                                necessitatibus soluta voluptatum ab nobis? Necessitatibus eos ut similique, soluta accusantium molestias, natus at consequuntur suscipit 
-                                placeat ratione non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus facere recusandae ipsa, illo et consequatur in. 
-                                Perspiciatis dolor dicta a tempore? Molestias quae ipsa laboriosam earum vel fugiat, nobis numquam. 
-                                Natus dolore exercitationem perspiciatis ab nemo. Recusandae vero ipsa ipsum mollitia modi aperiam at inci</p>
+                            <p>Here at the Travel Bug, we have been getting people to their dream holiday destinations
+                                for over 10 years! 
+                                <br>
+                                We specialise in sighseeing holidays that will take your breath away.
+                                From gigantic monuments to the seven wonders of the world, we can get you there.
+                                We also offer up to 5* luxury beach holidays, where nothing is ever too much. Relax in 
+                                some of the most beautiful spots around the word. 
+                                <br>
+                                <br>
+                                For the thrill seekers out there we have the adveture package where you can hit the slopes, 
+                                take a motorbike over the sand dunes or go pony trekking in the mountains.
+                                <br>
+                                <br>
+                                Get inspired with our wide range of destinations! Contct us today for more information 
+                                and to speak to one of our holiday experts.
+                                <br>
+                                <br>
+                                Bon Voyage!
+                            </p>
                         </div>
                     </div>
                 </div>
+
                 
                 <!--image gallery cards-->
                 <div class="row image-gallery">
 				
                
                     <div class="card" style="width: 17rem;">
-                        <img src="https://cdn.pixabay.com/photo/2015/07/02/10/10/cinque-terre-828614__480.jpg" class="card-img-top" alt="...">
+                        <img src="https://cdn.pixabay.com/photo/2016/06/12/03/48/thailand-1451382__480.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-title">Italy</p>
+                          <p class="card-title about-cards">Thailand</p>
                         </div>
                     </div>
 
+                    
                     <div class="card" style="width: 17rem;">
-                        <img src="https://cdn.pixabay.com/photo/2016/06/12/03/48/thailand-1451382__480.jpg" class="card-img-top" alt="...">
+                        <img src="https://cdn.pixabay.com/photo/2015/07/02/10/10/cinque-terre-828614__480.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-title">Thailand</p>
+                          <p class="card-title about-cards">Italy</p>
                         </div>
                     </div>
 
                     <div class="card" style="width: 17rem;">
                         <img src="https://cdn.pixabay.com/photo/2015/03/18/21/17/bora-bora-680010__480.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-title">Bora Bora</p>
+                          <p class="card-title about-cards">Bora Bora</p>
                         </div>
                     </div>
                     
                     <div class="card" style="width: 17rem;">
                         <img src="https://cdn.pixabay.com/photo/2015/03/26/10/01/burj-al-arab-690768__480.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-title">Dubai</p>
+                          <p class="card-title about-cards">Dubai</p>
                         </div>
                     </div>    
                 </div>    
-            </div>      
+            </div>   
+             <!-- Modal -->
+    <div class="modal" tabindex="-1" role="dialog" id="mymodal">
+        <div class="modal-dialog" role="document">
+             <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Contact Us</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form class="email-request-form">
+                      <div class="form-group">
+                          <label for="name">Your name</label>
+                          <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="text" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                          <label for="Message">Message</label>
+                          <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+                  </form>
+                </div>
+          </div>
+        </div>   
         </div>
     </main>
 

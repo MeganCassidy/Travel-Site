@@ -1,3 +1,4 @@
+
 .mt-20 {
 	margin-top: 20px;
 }
@@ -107,3 +108,54 @@ footer>.container, footer .row {
 	margin-top: 2em;
 	margin-left: 1.5em;
 }
+
+.heading{
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	color: rgba(0, 0, 0, 0.61);
+}
+
+.btn-primary{
+	background-color: #059896;
+	border: none;
+}
+
+.btn-outline-primary {
+	background-color: #059896;
+	color: white;
+}
+
+.btn-primary:hover{
+	background-color: #047573;
+}
+
+
+
+.articles{
+	flex-wrap: wrap;
+}
+
+.list-title{
+	color: #059896;
+}
+
+.about-cards{
+	text-align: center;
+	color: #059896;
+}
+
+.main-title{
+	color: #059896c2;
+}
+
+.about-us-title{
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.admin-link {
+	color: #059896;
+}
+
