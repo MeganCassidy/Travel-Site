@@ -159,3 +159,22 @@ footer>.container, footer .row {
 	color: #059896;
 }
 
+.carousel-item {
+	max-width: 100%;
+	max-height: 300px;
+}
+
+
+
+.articles{
+	flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+	.carousel-item {
+		max-width: 100%;
+
+	}
+	
+}
+
