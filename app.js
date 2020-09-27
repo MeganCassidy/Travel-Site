@@ -14,7 +14,7 @@ let auth = require('./controllers/auth');
 app.set('view engine', 'ejs');
 
 
-mongoose.connect('mongodb://localhost/travels', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://McUser:Developer2020@travelcluster.gclw9.mongodb.net/travel?retryWrites=true&w=majority', { useNewUrlParser: true });
 app.use(express.json());
 let imageStorage = multer.diskStorage({
     destination: (req, file, cb) => cb(null, 'public/images'),
