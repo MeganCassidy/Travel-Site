@@ -1,5 +1,3 @@
-const {response} = require('express');
-
 async function getPosts() {
     return await fetch('/posts')
             .then((response) => response.json())
